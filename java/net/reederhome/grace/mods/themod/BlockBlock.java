@@ -16,6 +16,7 @@ public class BlockBlock extends Block {
 			block = (Block)Block.blockRegistry.getObject(keys[new Random().nextInt(keys.length)]);
 		} while(block==this);
 		System.out.println(block.getUnlocalizedName());
+		setBlockName("blockBlock");
 	}
 	public IIcon getIcon(int s, int m) {
 		return block.getIcon(s, m);
