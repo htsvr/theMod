@@ -1,7 +1,10 @@
 package net.reederhome.grace.mods.themod;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -19,5 +22,8 @@ public class TheMod {
 	public void preInit(FMLPreInitializationEvent ev) {
 		GameRegistry.registerBlock(blockBlock, "blockBlock");
 		GameRegistry.registerItem(itemItem, "itemItem");
+		
+		GameRegistry.addRecipe(new ItemStack(itemItem),"byb","oso","ryr",'b',new ItemStack(Items.dye, 1, 4),'y',new ItemStack(Items.dye, 1, 11),'o',new ItemStack(Items.dye, 1, 14),'s',Items.stick,'r',Items.redstone);
+		GameRegistry.addRecipe(new ItemStack(blockBlock),"scs","wIw","rir",'s',Blocks.stone,'c',Blocks.cobblestone,'w',Blocks.planks,'I',itemItem,'r',Items.redstone,'i',Items.iron_ingot);
 	}
 }
