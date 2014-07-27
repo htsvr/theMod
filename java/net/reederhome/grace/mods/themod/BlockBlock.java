@@ -17,6 +17,8 @@ public class BlockBlock extends Block {
 		} while(block==this);
 		System.out.println(block.getUnlocalizedName());
 		setBlockName("blockBlock");
+		setHardness(10);
+		setHarvestLevel("pickaxe", 2);
 	}
 	public IIcon getIcon(int s, int m) {
 		return block.getIcon(s, m);

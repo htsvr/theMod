@@ -10,10 +10,11 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid=TheMod.MODID,name=TheMod.NAME)
+@Mod(modid=TheMod.MODID,name=TheMod.NAME,version=TheMod.VERSION)
 public class TheMod {
 	public static final String MODID="themod";
 	public static final String NAME="The Mod";
+	public static final String VERSION="0.0.0";
 	
 	public static Block blockBlock=new BlockBlock();
 	public static Item itemItem=new ItemItem();
