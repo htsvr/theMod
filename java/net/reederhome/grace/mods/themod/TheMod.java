@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid=TheMod.MODID,name=TheMod.NAME,version=TheMod.VERSION)
@@ -16,11 +16,14 @@ public class TheMod {
 	public static final String NAME="The Mod";
 	public static final String VERSION="0.0.0";
 	
-	public static Block blockBlock=new BlockBlock();
-	public static Item itemItem=new ItemItem();
+	public static Block blockBlock;
+	public static Item itemItem;
 	
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent ev) {
+	public void postInit(FMLPostInitializationEvent ev) {
+		blockBlock = new BlockBlock();
+		itemItem = new ItemItem();
+		
 		GameRegistry.registerBlock(blockBlock, "blockBlock");
 		GameRegistry.registerItem(itemItem, "itemItem");
 		
